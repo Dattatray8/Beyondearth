@@ -1,0 +1,82 @@
+ <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Home Page</title>
+      <style>
+          /* Basic Styling - Customize as needed */
+          .navbar {
+              background-color: #f0f0f0;
+            background-size: cover;
+              padding: 5px;
+              display: flex;
+              justify-content: space-between;
+              align-items: center; width: 100%;
+          }
+                   .navname{
+              display: flex;
+          }
+        .bg-image{
+          padding-top: 50px;
+    background-image: url('backgroundimg.webp');
+    background-size: cover; 
+    background-position: center;
+    min-height: 100vh;
+        }
+
+          .tab-container {
+              display: flex;
+              justify-content: center;
+              margin-top: 20px;
+          }
+
+          .planet-tab {
+              padding: 12px 30px;
+              background-color: rgba(0, 0, 100, 0.3);
+              color: white;
+              border: 2px solid rgba(255, 255, 255, 0.3); 
+              border-radius: 5px;
+              cursor: pointer;
+              text-decoration: none;
+              font-weight: bold; 
+              box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+              transition: background-color 0.3s ease, box-shadow 0.3s ease; 
+              width: 70%;
+              /* Desktop Styles */
+              @media (min-width: 768px) {
+                  padding: 16px 40px; 
+                  font-size: 1.2rem; width:70%; 
+              }
+          }
+
+          .planet-tab:hover {
+              background-color: rgba(0, 0, 100, 0.45);
+          }
+
+  </style></head>
+  <body>
+    
+    <nav class="navbar">
+      <div class="navname">
+        <h1>Beyond Earth: A Planetary Exploration</h1>
+        </div>  
+    </nav>
+    <div class="bg-image">
+
+        <div class="tab-container">
+        <button class="planet-tab" onclick="window.location.href='exploregalaxy.html'"> Explore Galaxies</button>
+        </div>
+        
+        <div class="tab-container">
+        <button class="planet-tab" onclick="window.location.href='starcycle.html'"> Life cycle of star</button>
+        </div>
+        <div class="tab-container">
+            <button class="planet-tab" onclick="window.location.href='planets.html'"> Explore Planets</button>
+            </div>
+        <div class="tab-container">
+            <button class="planet-tab"> Solar System Animation </button>
+            </div>
+    </div>
+  </body>
+</html>
