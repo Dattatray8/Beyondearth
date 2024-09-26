@@ -1,10 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
-    <style>
+<!doctype html>
+<html lang="en"> 
+ <head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Login Page</title> 
+  <style>
         body {
             margin: 0;
             padding: 0;
@@ -70,17 +70,45 @@
         .login-container p a:hover {
             text-decoration: underline;
         }
-    </style>
-</head>
-<body>
-    <div class="login-container">
-        <h2>Login</h2>
-        <form action="#" method="post">
-            <input type="text" name="username" placeholder="Username" required>
-            <input type="password" name="password" placeholder="Password" required>
-            <input type="submit" value="Login" onclick="window.location.href='homepage.html'">
-        </form>
-        <p>Don't have an account? <a href="index.html">Sign up</a></p>
-    </div>
-</body>
+    </style> 
+ </head> 
+ <body> 
+  <div class="login-container"> 
+   <h2>Login</h2> 
+   <form name="loginForm"> 
+    <input type="text" name="username" placeholder="Username"> 
+    <input type="password" name="password" placeholder="Password"> 
+    <input type="submit" value="Login"> 
+   </form> 
+   <p>Don't have an account? <a href="index.html">Sign up</a></p> 
+  </div> 
+  <script>
+        document.querySelector('form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var username = document.loginForm.username.value;
+            var password = document.loginForm.password.value;
+
+            // Validation for username
+            if (username === "") {
+                alert("Username cannot be blank.");
+                return false;
+            }
+
+            // Password Validation
+            if (password === "") {
+                alert("Password cannot be blank.");
+                return false;
+            }
+
+            // Additional Validation: Minimum password length
+            if (password.length < 6) {
+                alert("Password must be at least 6 characters long.");
+                return false;
+            }
+
+            window.location.href = 'homepage.html';
+       
+        });
+    </script> 
+ </body>
 </html>
